@@ -1,17 +1,16 @@
-import java.util.Objects;
-
 // Benjamin Luo
 // 2021.12.13
 // MSCI240: Data Structures and Algorithms - Final Project
 // problemCount.java - Helper class 
 
-/* Desc.
- * problemCount object tracks information on each unique problem type:
+import java.util.Objects;
+
+/* 
+ * Desc: problemCount object tracks information on each unique problem type:
  *	 .problem: The specific problem type
  *	 .count: The frequency of the given problem type
  *	 .removed: The minimum number of removals to achieve K consecutive robots
 */
-
 public class problemCount {
 	private int problem;
 	private int count = 0;
@@ -29,11 +28,10 @@ public class problemCount {
 	
 	// Modifiers
 	public void increaseCount() {this.count++;}
-	public void increaseRemoved() {this.removed++;}
 	public void setRemoved(int val) {this.removed = val;}
 	
 	// Checking for equality
-	// Used by PriorityQueue.contains()
+	// Used by Collections.contains()
 	// Copied and Modified from A3 TweetCount class
 	@Override
 	public boolean equals(Object other) {
